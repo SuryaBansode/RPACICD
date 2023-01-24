@@ -36,13 +36,13 @@ pipeline {
 	                      version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
 	                      useOrchestrator: false,
 						  traceLevel: 'None'
-	        )
+					)
 	            }
 	        }
 	         // Test Stages
 	        stage('Test') {
 	            steps {
-	                echo 'Testing..the workflow...'
+	                echo "Testing..the workflow..."
 	            }
 	        }
 	
@@ -73,7 +73,7 @@ pipeline {
 	         // Deploy to Production Step
 	        stage('Deploy to Production') {
 	            steps {
-	                echo 'Deploy to Production'
+	                echo "Deploy to Production"
 	                }
 	            }
 	    }
@@ -92,7 +92,7 @@ pipeline {
 	    // 
 	    post {
 	        success {
-	            echo 'Deployment has been completed!'
+	            echo "Deployment has been completed!"
 	        }
 	        failure {
 	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
