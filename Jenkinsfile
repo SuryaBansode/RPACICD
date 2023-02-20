@@ -1,7 +1,7 @@
 pipeline {
 	    agent any
 	
-	        // Environment Variables
+	        // Environment Variables for RPA
 	        environment {
 	        MAJOR = '1'
 	        MINOR = '0'
@@ -97,7 +97,5 @@ pipeline {
 	            /* Clean workspace if success */
 	            cleanWs()
 	        }
-	    }
-	
-
+	    }	
 	}
